@@ -35,8 +35,8 @@ app.post('/upload', upload.single('image'), (req, res) => {
   // Process the uploaded image here if needed (e.g., resizing, compression, etc.)
   // You can save the image URL in your database if necessary
 
-  const imageUrl = `http://localhost:3002/uploads/${req.file.filename}`;
-  return res.status(200).json({ success: true, imageUrl: imageUrl });});
+  // const imageUrl = `http://localhost:3002/uploads/${req.file.filename}`;
+  return res.status(200).json({ success: true });});
 
 // Serve the static files from the "uploads" folder
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
