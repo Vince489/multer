@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thumbnails Page</title>
+  <style>
+    /* CSS styling for the thumbnails */
+    img.thumbnail {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thumbnails Page</h1>
+  <% for (let i = 0; i < thumbnails.length; i++) { %>
+    <a href="<%= thumbnails[i] %>">
+      <!-- Add the "thumbnail" class to the image to apply the CSS styling -->
+      <img src="<%= thumbnails[i] %>" alt="Thumbnail <%= i + 1 %>" class="thumbnail">
+    </a>
+  <% } %>
+</body>
+</html>
