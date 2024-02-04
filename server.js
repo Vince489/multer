@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3002; 
+const PORT = process.env.PORT || 3002;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
