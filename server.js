@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3002; // You can change this to any port number you prefer
+const PORT = 3002; 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
